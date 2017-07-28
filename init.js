@@ -47,7 +47,7 @@ function _onctcp(e) {
             return;
 
         code = toUnicode(code, e.replyTo);
-        data = toUnicode(ary[2] || '', e.replyTo);
+        var data = toUnicode(ary[2] || '', e.replyTo);
 
         e.server.parent.display('CTCP "' + code + '" of "' + data + '" from "' + e.user.unicodeName + '"', 'INFO', e.user || e.server.parent, e.channel || e.server.me);
     } catch (ex) {
